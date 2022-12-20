@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="title">ES6 Classes mini-project</h2>
+
+    <script type="text/javascript">
+    
+
+    class Pet {
+        constructor (kind, color, leg) {
+            this.kind = kind;
+            this.color = color;
+            this.leg = leg;
+        }
+        indoor() {
+            console.log(`My ${this.kind} has ${this.leg} legs and ${this.color} color lives indoor.`);
+        } 
+        animal() {
+            console.log(`My ${this.color} ${this.kind} is an animal kept primarily for my company or entertainment.`);
+        }
+    }
+
+    class popularPet extends Pet {
+        popular() {
+            console.log(`My ${this.color} ${this.kind} has attractive appearances, intelligence, and relatable personalities.`);
+        }
+    }
+
+    class unpopularPet extends Pet {
+        unpopular() {
+            console.log("Some pets may be taken in on an altruistic basis and accepted by the owner regardless of these characteristics.");
+        }
+    }
+
+    class Rodents extends unpopularPet {
+        rodent() {
+            console.log(`${this.kind} are characterized by a single pair of continuously growing incisors in each of the upper and lower jaws.`)
+        }
+    }
+
+    class Birds extends unpopularPet {
+        bird () {
+            console.log(`${this.kind} characterized by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton.`)
+        }
+    }
+
+    let Bird1 = new Birds("Parrot", "colorful", 2);
+    let Rodent1 = new Rodents("Hamster", "brown", 4);
+    let popularPet1 = new popularPet("Dog", "white", 4); 
+
+    Bird1.bird();
+    Rodent1.rodent();
+    popularPet1.popular();
+    Rodent1.indoor(); 
+    Bird1.animal();   
+
+    </script>
+</body>
+</html>
