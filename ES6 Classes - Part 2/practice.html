@@ -19,28 +19,28 @@
             this.seat = seat;
         }
         startEngine() {
-            console.log("Engine started.");
+            console.log(`Engine of the ${this.brand} ${this.model} with ${this.seat} seats started.`);
         } 
         stopEngine() {
-            console.log("Engine stopped.");
+            console.log(`Engine of the ${this.brand} ${this.model} with ${this.seat} seats stopped.`);
         }
     }
 
     class Helicopter extends Airplane {
         goUp() {
-            console.log("Helicopter went up.");
+            console.log(`Helicopter ${this.brand} ${this.model} with ${this.seat} seats went up.`);
         }
         goDown() {
-            console.log("Helicopter went down.");
+            console.log(`Helicopter  ${this.brand} ${this.model} with ${this.seat} seats went down.`);
         }
     }
 
     class Jet extends Airplane {
         takeOff() {
-            console.log("Jet took off.");
+            console.log(`Jet ${this.brand} ${this.model} with ${this.seat} seats took off.`);
         }
         touchDown() {
-            console.log("Jet landed.");
+            console.log(`Jet ${this.brand} ${this.model} with ${this.seat} seats landed.`);
         }
     }
 
