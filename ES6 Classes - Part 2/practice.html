@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="title">ES6 Classes - Part 2</h2>
+
+    <script type="text/javascript">
+    
+
+    class Airplane {
+        constructor (brand, model, seat) {
+            this.brand =brand;
+            this.model = model;
+            this.seat = seat;
+        }
+        startEngine() {
+            console.log("Engine started.");
+        } 
+        stopEngine() {
+            console.log("Engine stopped.");
+        }
+    }
+
+    class Helicopter extends Airplane {
+        goUp() {
+            console.log("Helicopter went up.");
+        }
+        goDown() {
+            console.log("Helicopter went down.");
+        }
+    }
+
+    class Jet extends Airplane {
+        takeOff() {
+            console.log("Jet took off.");
+        }
+        touchDown() {
+            console.log("Jet landed.");
+        }
+    }
+
+    let Jet1 = new Jet("Boeing", 747, 300);
+    let Helicopter1 = new Helicopter("Aerospace", "General Mini-Copter", 2);
+
+    Jet1.startEngine();
+    Jet1.takeOff();
+    Helicopter1.startEngine();
+    Helicopter1.goUp();    
+
+    </script>
+</body>
+</html>
